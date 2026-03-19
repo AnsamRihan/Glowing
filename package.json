@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "buildcss":"npx @tailwindcss/cli -i ./assets/CSS/input.css -o ./assets/CSS/output.css --watch"
+    "build:css": "npx @tailwindcss/cli -i ./assets/CSS/input.css -o ./assets/CSS/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "@tailwindcss/cli": "^4.2.1",
+    "flowbite": "^4.0.1",
     "tailwindcss": "^4.2.1"
   }
 }
