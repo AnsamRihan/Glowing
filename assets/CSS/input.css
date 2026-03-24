@@ -135,7 +135,7 @@
 }
 
 @utility bg-dropdown-offer {
-    background-image: url('../images/Global/dropdown-menu-offer.jpg');
+    background-image: url('./../images/Global/dropdown-menu-offer.jpg');
 }
 
 @utility btn-light {
