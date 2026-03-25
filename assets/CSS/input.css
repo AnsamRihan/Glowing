@@ -78,11 +78,15 @@
 }
 
 @utility container{
-    @apply mx-auto px-4 h-full xs:max-w-135 sm:max-w-135 md:max-w-180 lg:max-w-7xl xl:max-w-8xl;
+    @apply mx-auto px-4 h-full xs:max-w-135 sm:max-w-135 md:max-w-180 lg:max-w-7xl;
 }
 
-@utility container_header{
-    @apply container 2xlarge:max-w-465;
+@utility container-xl{
+    @apply container xl:max-w-8xl;
+}
+
+@utility container-xxl{
+    @apply container-xl 2xlarge:max-w-465;
 }
 
 @utility row{
