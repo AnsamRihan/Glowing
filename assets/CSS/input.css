@@ -143,6 +143,11 @@
     background-image: url('./../images/Global/dropdown-menu-offer.jpg');
 }
 
+@utility btn-primary {
+  @apply py-2.5 px-8.25 text-base font-semibold rounded-[3px] text-secondary-foreground bg-primary
+  text-center capitalize w-fit hover:bg-dark-bg transition-colors ease-in-out duration-300;
+}
+
 @utility btn-light {
   @apply py-2.5 px-8.25 text-base font-semibold rounded-[3px] text-primary-foreground bg-primary-bg 
   text-center capitalize w-fit hover:bg-primary hover:text-secondary-foreground transition-colors ease-in-out duration-300;
