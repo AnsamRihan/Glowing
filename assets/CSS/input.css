@@ -16,12 +16,16 @@
     --color-danger: #dc3545;
     --color-light-success: #83b735;
     --color-success: #4e7661;
+    --color-green: #198754;
     --color-sidebar-line: #ededdf;
     --color-sidebar-DoubleDropdown-line: #e4e4e4;
     --color-sidebar-dropdown-menu-color: #f2f2f2;
     --color-sidebar-DoubleDropdown-menu-color:#e4e4e4;
     --color-light-border-color: #EEEEE0;
     --color-bank-cards-border-color: #e6e6e6;
+    --color-table-odd-color: #f2f2f2;
+    --color-table-even-color: #ffffff;
+    --color-table-hover-color: #ececec;
 
     /*Foregrounds colors*/
     --color-primary-foreground: #000000;
