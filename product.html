@@ -1,0 +1,2961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <!--Page Icon-->
+    <link rel="icon" href="./assets/images/Global/glowing.ico">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--CSS-->
+    <link href="./assets/CSS/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Site-wide Announcement-->
+    <div class="announcement bg-primary h-10 text-secondary-foreground font-medium text-base">
+        <div class="container center">
+            <span>Free shipping on all U.S. orders $50+</span>
+        </div>
+    </div>
+
+    <!--Header-->
+    <header class="header bg-primary-bg sticky top-0 z-50 h-20 lg:h-[84.8px] xl:h-25.25 shadow-md">
+        <div class="container-xxl">
+            <nav class="relative h-full row justify-between items-center">
+                <div class="list h-full row items-center">
+                    <!--Sidebar button-->
+                    <button type="button" data-drawer-target="sidebar-drawer" data-drawer-show="sidebar-drawer"
+                        data-drawer-body-scrolling="false" aria-controls="sidebar-drawer"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg xlarge:hidden 
+                        hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default">
+                        <span class="sr-only">Open main menu</span>
+                        <img src="./assets/images/Global/list-icon.svg" alt="Open main menu" class="w-7" />
+                    </button>
+
+                    <!--Navbar links-->
+                    <div class="h-full hidden xlarge:w-auto xlarge:block">
+                        <ul class="stack justify-center h-full mt-4 md:flex-row md:mt-0 gap-8.75 text-[14px] tracking-[1.4px]">
+
+                            <!--Home navbar link-->
+                            <li>
+                                <a id="homeDropdownButton" data-dropdown-toggle="homeDropdownHover"
+                                    data-dropdown-trigger="hover" href="./index.html" class="nav-link border border-transparent focus:ring-1
+                                    focus:ring-primary leading-5 focus:outline-none relative" aria-current="page">
+                                    <div class="inline-flex items-center">
+                                        Home
+                                        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                    <hr class="absolute bottom-1 border-t border-primary-foreground w-full">
+                                </a>
+                            </li>
+
+                            <!--Shop navbar link-->
+                            <li>
+                                <a id="shopDropdownButton" data-dropdown-toggle="shopDropdownHover"
+                                    data-dropdown-trigger="hover" href="./products.html" class="nav-link border border-transparent focus:ring-1
+                                    focus:ring-primary leading-5 focus:outline-none group/line relative"
+                                    aria-current="page">
+                                    <div class="inline-flex items-center">
+                                        Shop
+                                        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                    <hr
+                                        class="absolute bottom-1 hidden border-t border-primary-foreground w-0 group-hover/line:block group-hover/line:w-full transition-all duration-500">
+                                </a>
+                            </li>
+
+                            <!--Product navbar link-->
+                            <li>
+                                <a id="productDropdownButton" data-dropdown-toggle="productDropdownHover"
+                                    data-dropdown-trigger="hover" href="#" class="nav-link border border-transparent focus:ring-1
+                                    focus:ring-primary leading-5 focus:outline-none group/line relative"
+                                    aria-current="page">
+                                    <div class="inline-flex items-center">
+                                        product
+                                        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                    <hr
+                                        class="absolute bottom-1 hidden border-t border-primary-foreground w-0 group-hover/line:block group-hover/line:w-full transition-all duration-500">
+                                </a>
+                            </li>
+
+                            <!--Pages navbar link-->
+                            <li>
+                                <a id="pagesDropdownButton" data-dropdown-toggle="pagesDropdownHover"
+                                    data-dropdown-trigger="hover" href="#" class="nav-link border border-transparent focus:ring-1
+                                    focus:ring-primary leading-5 focus:outline-none group/line relative"
+                                    aria-current="page">
+                                    <div class="inline-flex items-center">
+                                        pages
+                                        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                    <hr
+                                        class="absolute bottom-1 hidden border-t border-primary-foreground w-0 group-hover/line:block group-hover/line:w-full transition-all duration-500">
+                                </a>
+                            </li>
+
+                            <!--Blog navbar link-->
+                            <li>
+                                <a id="blogDropdownButton" data-dropdown-toggle="blogDropdownHover"
+                                    data-dropdown-trigger="hover" href="#" class="nav-link border border-transparent focus:ring-1
+                                    focus:ring-primary leading-5 focus:outline-none group/line relative"
+                                    aria-current="page">
+                                    <div class="inline-flex items-center">
+                                        Home
+                                        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                    <hr
+                                        class="absolute bottom-1 hidden border-t border-primary-foreground w-0 group-hover/line:block group-hover/line:w-full transition-all duration-500">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Sidebar-->
+                    <div id="sidebar-drawer" class="fixed top-0 left-0 z-40 h-screen transition-transform 
+                        -translate-x-full bg-primary-bg w-75 border-e border-default grid grid-rows-[68px_1fr_216px]"
+                        tabindex="-1" aria-labelledby="sidebar-drawer-label">
+
+                        <!--LOGO + exit button inside sidebar-->
+                        <div class="z-30 w-full px-4 py-4 bg-primary-bg flex items-center justify-between">
+                            <a href="./index.html" class="flex items-center max-w-37.5">
+                                <img src="./assets/images/Global/logo.png" class="w-full" alt="Glowing Logo" />
+                            </a>
+                            <button type="button" data-drawer-hide="sidebar-drawer" aria-controls="sidebar-drawer"
+                                class="text-sidebar-foreground bg-transparent hover:text-primary-foreground w-9 h-9 flex items-center justify-center">
+                                <svg class="w-6.25 h-6.25" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                </svg>
+                                <span class="sr-only">Close menu</span>
+                            </button>
+                        </div>
+
+                        <!--navlink list-->
+                        <div class="overflow-y-auto">
+                            <ul class="font-semibold text-[15px]">
+                                <!--Home sidebar menu-->
+                                <li>
+                                    <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                        hover:text-primary-foreground group border-b border-sidebar-line transition duration-500 
+                                        ease-in-out cursor-pointer">
+                                        <a href="./index.html" class="uppercase flex-1 text-left whitespace-nowrap">
+                                            Home
+                                        </a>
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24"
+                                            aria-controls="HomeDropdown" data-collapse-toggle="HomeDropdown">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+
+                                    <div id="HomeDropdown"
+                                        class="hidden px-3.5 py-7.5 space-y-4 bg-sidebar-dropdown-menu-color">
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Group 01
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 01
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 02
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 03
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 04
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 05
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Group 02
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 06
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 07
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 08
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 09
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 05
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Group 03
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 06
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 07
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 08
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 09
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 05
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Group 04
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 16
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 17
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Home 18
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Group 05
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        Demo 01
+                                                        <span class="danger-badge">
+                                                            Hot
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        Demo 02
+                                                        <span class="danger-badge">
+                                                            Hot
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        Demo 03
+                                                        <span class="light-success-badge">
+                                                            new
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        Demo 04
+                                                        <span class="light-success-badge">
+                                                            new
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <!--Shop sidebar menu-->
+                                <li>
+                                    <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                        hover:text-primary-foreground group border-b border-sidebar-line transition duration-500 
+                                        ease-in-out cursor-pointer">
+                                        <a href="./products.html" class="uppercase flex-1 text-left whitespace-nowrap">
+                                            Shop
+                                        </a>
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24"
+                                            aria-controls="shopDropdown" data-collapse-toggle="shopDropdown">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+
+                                    <div id="shopDropdown"
+                                        class="hidden px-3.5 py-7.5 space-y-4 bg-sidebar-dropdown-menu-color">
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Shop layout
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        left sidebar
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        right sidebar
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        Canvas filter
+                                                        <span class="danger-badge">
+                                                            Hot
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        hidden filter
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Grid 3 column
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Grid 4 column
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Grid 5 column
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Product skin
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product skin grid 01
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product skin grid 02
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product skin grid 03
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product skin grid 04
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product skin grid 05
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product skin grid 06
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Product list skin
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                shop features
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        pagination classic
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        pagination ajax
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        pagination infinite
+                                                        <span class="success-badge">
+                                                            featured
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        pagination loadmore
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        pagination next previous
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Collections
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Collections list style 02
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Collections list style 02
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Collections list style 03
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Collections list style 04
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Collections list masonry
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Collections list with sidebar
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div
+                                            class="specialOffer mt-7 bg-dropdown-offer bg-cover bg-center transition-all p-5
+                                                duration-1000 ease-in-out hover:bg-size-[120%] text-primary-foreground flex flex-col justify-between">
+                                            <div class="offer-info">
+                                                <p class="uppercase text-[15px] font-semibold tracking-[1.5px]">
+                                                    new collection
+                                                </p>
+
+                                                <h3 class="capitalize text-[34px] mt-1.75 font-semibold">
+                                                    special <br>
+                                                    offer
+                                                </h3>
+                                            </div>
+
+                                            <a href="./products.html" class="btn-light">
+                                                shop now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!--Product sidebar menu-->
+                                <li>
+                                    <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                        hover:text-primary-foreground group border-b border-sidebar-line transition duration-500 
+                                        ease-in-out cursor-pointer">
+                                        <a href="#" class="uppercase flex-1 text-left whitespace-nowrap">
+                                            Product
+                                        </a>
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24"
+                                            aria-controls="productDropdown" data-collapse-toggle="productDropdown">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+
+                                    <div id="productDropdown"
+                                        class="hidden px-3.5 py-7.5 space-y-4 bg-sidebar-dropdown-menu-color">
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                Product layout
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        single product layout 01
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        single product layout 02
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link=">
+                                                        single product layout 03
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        single product layout 04
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        single product layout 05
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        single product layout 06
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                product features
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product color swatch
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product button swatch
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product dropdown swatch
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product image swatch
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product video
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        product 3D. AR models
+                                                        <span class="success-badge">
+                                                            featured
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                product features
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        Dynamic checkout button
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        sticky add to cart
+                                                        <span class="danger-badge">
+                                                            Hot
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        trust budget
+                                                        <span class="success-badge">
+                                                            featured
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        lightbox image
+                                                        <span class="success-badge">
+                                                            featured
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link flex items-center gap-1.5">
+                                                        zoom image
+                                                        <span class="danger-badge">
+                                                            Hot
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="stack items-start">
+                                            <h3 class="sidebar-dropdown-menu-header">
+                                                product featues
+                                            </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        collapsible tabs information
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product tabs information
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product reccomentdations
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product recently viewed
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="sidebar-dropdown-link">
+                                                        product options & customizer
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!--Pages sidebar menu-->
+                                <li>
+                                    <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                        hover:text-primary-foreground group border-b border-sidebar-line transition duration-500 
+                                        ease-in-out cursor-pointer">
+                                        <a href="#" class="uppercase flex-1 text-left whitespace-nowrap">
+                                            Pages
+                                        </a>
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24"
+                                            aria-controls="pagesDropdown" data-collapse-toggle="pagesDropdown">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+
+                                    <div id="pagesDropdown" class="hidden space-y-4 bg-sidebar-dropdown-menu-color">
+
+                                        <ul>
+                                            <!--About us double dropdown menu-->
+                                            <li>
+                                                <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                                    hover:text-primary-foreground group border-b border-sidebar-DoubleDropdown-line transition duration-500 
+                                                    ease-in-out cursor-pointer">
+                                                    <a href="#"
+                                                        class="capitalize flex-1 text-left whitespace-nowrap font-medium">
+                                                        About us
+                                                    </a>
+                                                    <svg class="w-5 h-5" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="none" viewBox="0 0 24 24" aria-controls="aboutDropdown"
+                                                        data-collapse-toggle="aboutDropdown">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2"
+                                                            d="m19 9-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+
+                                                <div id="aboutDropdown"
+                                                    class="hidden space-y-4 bg-sidebar-DoubleDropdown-menu-color">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                about us 01
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                about us 02
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <!--Contact us double dropdown menu-->
+                                            <li>
+                                                <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                                    hover:text-primary-foreground group border-b border-sidebar-DoubleDropdown-line transition duration-500 
+                                                    ease-in-out cursor-pointer">
+                                                    <a href="#"
+                                                        class="capitalize flex-1 text-left whitespace-nowrap font-medium">
+                                                        Contact us
+                                                    </a>
+                                                    <svg class="w-5 h-5" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="none" viewBox="0 0 24 24" aria-controls="contactDropdown"
+                                                        data-collapse-toggle="contactDropdown">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2"
+                                                            d="m19 9-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+
+                                                <div id="contactDropdown"
+                                                    class="hidden space-y-4 bg-sidebar-DoubleDropdown-menu-color">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                contact us 01
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                contact us 02
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a href="#"
+                                                    class="sidebar-dropdown-link px-4 py-2 border-b border-sidebar-DoubleDropdown-line">
+                                                    FAQ
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#"
+                                                    class="sidebar-dropdown-link px-4 py-2 border-b border-sidebar-DoubleDropdown-line">
+                                                    Fin a store
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#"
+                                                    class="sidebar-dropdown-link px-4 py-2 border-b border-sidebar-DoubleDropdown-line">
+                                                    page 404
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!--Blog sidebar menu-->
+                                <li>
+                                    <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                        hover:text-primary-foreground group border-b border-sidebar-line transition duration-500 
+                                        ease-in-out cursor-pointer">
+                                        <a href="#" class="uppercase flex-1 text-left whitespace-nowrap">
+                                            Blog
+                                        </a>
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24"
+                                            aria-controls="blogDropdown" data-collapse-toggle="blogDropdown">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </div>
+
+                                    <div id="blogDropdown" class="hidden space-y-4 bg-sidebar-dropdown-menu-color">
+
+                                        <ul>
+                                            <!--Blogs standards double dropdown menu-->
+                                            <li>
+                                                <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                                    hover:text-primary-foreground group border-b border-sidebar-DoubleDropdown-line transition duration-500 
+                                                    ease-in-out cursor-pointer">
+                                                    <a href="#"
+                                                        class="capitalize flex-1 text-left whitespace-nowrap font-medium">
+                                                        Blogs standards
+                                                    </a>
+                                                    <svg class="w-5 h-5" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="none" viewBox="0 0 24 24"
+                                                        aria-controls="standardsDropdown"
+                                                        data-collapse-toggle="standardsDropdown">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2"
+                                                            d="m19 9-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+
+                                                <div id="standardsDropdown"
+                                                    class="hidden space-y-4 bg-sidebar-DoubleDropdown-menu-color">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                full width
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                left sidebar
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                right sidebar
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <!--Blogs grid double dropdown menu-->
+                                            <li>
+                                                <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                                    hover:text-primary-foreground group border-b border-sidebar-DoubleDropdown-line transition duration-500 
+                                                    ease-in-out cursor-pointer">
+                                                    <a href="#"
+                                                        class="capitalize flex-1 text-left whitespace-nowrap font-medium">
+                                                        Blogs grid
+                                                    </a>
+                                                    <svg class="w-5 h-5" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="none" viewBox="0 0 24 24" aria-controls="gridDropdown"
+                                                        data-collapse-toggle="gridDropdown">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2"
+                                                            d="m19 9-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+
+                                                <div id="gridDropdown"
+                                                    class="hidden space-y-4 bg-sidebar-DoubleDropdown-menu-color">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                full width
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                left sidebar
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                right sidebar
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <!--Blogs grid 02 double dropdown menu-->
+                                            <li>
+                                                <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                                    hover:text-primary-foreground group border-b border-sidebar-DoubleDropdown-line transition duration-500 
+                                                    ease-in-out cursor-pointer">
+                                                    <a href="#"
+                                                        class="capitalize flex-1 text-left whitespace-nowrap font-medium">
+                                                        Blogs grid 02
+                                                    </a>
+                                                    <svg class="w-5 h-5" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="none" viewBox="0 0 24 24" aria-controls="grid2Dropdown"
+                                                        data-collapse-toggle="grid2Dropdown">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2"
+                                                            d="m19 9-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+
+                                                <div id="grid2Dropdown"
+                                                    class="hidden space-y-4 bg-sidebar-DoubleDropdown-menu-color">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                full width
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                left sidebar
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                right sidebar
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" class="sidebar-dropdown-link px-4 py-2 border-b 
+                                                border-sidebar-DoubleDropdown-line flex items-center gap-1.5">
+                                                    Blogs Masonry
+                                                    <span class="danger-badge">
+                                                        Hot
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <!--Blogs list double dropdown menu-->
+                                            <li>
+                                                <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                                    hover:text-primary-foreground group border-b border-sidebar-DoubleDropdown-line transition duration-500 
+                                                    ease-in-out cursor-pointer">
+                                                    <a href="#"
+                                                        class="capitalize flex-1 text-left whitespace-nowrap font-medium">
+                                                        Blogs list
+                                                    </a>
+                                                    <svg class="w-5 h-5" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="none" viewBox="0 0 24 24" aria-controls="listDropdown"
+                                                        data-collapse-toggle="listDropdown">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2"
+                                                            d="m19 9-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+
+                                                <div id="listDropdown"
+                                                    class="hidden space-y-4 bg-sidebar-DoubleDropdown-menu-color">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                full width
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                left sidebar
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                right sidebar
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <!--Blogs post double dropdown menu-->
+                                            <li>
+                                                <div class="flex items-center w-full justify-between px-4 py-2 text-sidebar-foreground 
+                                                    hover:text-primary-foreground group border-b border-sidebar-DoubleDropdown-line transition duration-500 
+                                                    ease-in-out cursor-pointer">
+                                                    <a href="#"
+                                                        class="capitalize flex-1 text-left whitespace-nowrap font-medium">
+                                                        Blogs post
+                                                    </a>
+                                                    <svg class="w-5 h-5" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="none" viewBox="0 0 24 24" aria-controls="postDropdown"
+                                                        data-collapse-toggle="postDropdown">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2"
+                                                            d="m19 9-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+
+                                                <div id="postDropdown"
+                                                    class="hidden space-y-4 bg-sidebar-DoubleDropdown-menu-color">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                layout 01
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                layout 02
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                class="sidebar-dropdown-link px-4 py-2 border-b border-[#d2d2d2]">
+                                                                with sidebar
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="h-full z-20 w-full shadow-[0_0_1rem_#4442] px-4 pt-6 pb-2 flex flex-col items-center">
+                            <!--currency/language input-->
+                            <div class="w-full flex items-center justify-around py-2.5">
+                                <!--Language-->
+                                <form>
+                                    <select id="language" class="block w-19.5 bg-transparent border-none
+                                    text-primary-foreground text-base font-semibold p-0
+                                    placeholder:text-body rounded ring-transparent focus:ring-2 focus:ring-primary">
+                                        <option selected value="EUR" class="uppercase">English</option>
+                                        <option value="USD-USA" class="uppercase">United states (USD$)</option>
+                                        <option value="USD-V" class="uppercase">Vietnam (USD$)</option>
+                                    </select>
+                                </form>
+
+                                <!--Currency-->
+                                <form>
+                                    <select id="currency" class="block w-37.75 bg-transparent border-none
+                                    text-primary-foreground text-base font-semibold p-0
+                                    placeholder:text-body rounded ring-transparent">
+                                        <option value="EUR" class="uppercase">Franse (EUR€)</option>
+                                        <option value="USD-USA" class="uppercase">United states (USD$)</option>
+                                        <option selected value="USD-V" class="uppercase">Vietnam (USD$)</option>
+                                    </select>
+                                </form>
+                            </div>
+
+                            <!--Social media-->
+                            <div class="w-full flex items-center justify-center gap-4 py-2.5">
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram text-[18px]"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-x-twitter text-[18px]"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook text-[18px]"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-youtube text-[18px]"></i>
+                                </a>
+                            </div>
+
+                            <!--Sign in / register button-->
+                            <div class="w-full mt-2.5 pt-6.25 pb-2.5 border-t border-sidebar-line">
+                                <a href="./sign-in.html" class="btn-dark w-full block">
+                                    Sign in/Register
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Logo-->
+                <div class="logo absolute left-1/2 -translate-x-1/2">
+                    <a href="./index.html">
+                        <img src="./assets/images/Global/logo.png" alt="Glowing Logo" class="py-5 max-w-40" />
+                    </a>
+                </div>
+
+                <!--Icons (navbar right div)-->
+                <div class="icons row justify-center gap-2.5 h-full xs:gap-6.5">
+                    <!--Search-->
+                    <div>
+                        <div>
+                            <button class="flex items-center w-6" type="button" data-drawer-target="search-drawer"
+                                data-drawer-show="search-drawer" data-drawer-placement="right"
+                                aria-controls="search-drawer">
+                                <img src="./assets/images/Global/search.png" alt="Search Icon" class="w-full">
+                            </button>
+                        </div>
+
+                        <!-- drawer component -->
+                        <div id="search-drawer" class="fixed top-0 right-0 z-40 h-screen transition-transform
+                        translate-x-full bg-primary-bg w-full xs:w-100 border-s border-default grid grid-rows-[55px_1fr]"
+                            tabindex="-1" aria-labelledby="drawer-right-label">
+
+                            <!--search + exit button inside sidebar-->
+                            <div class="z-30 w-full px-4 pt-4 bg-primary-bg flex items-center justify-between">
+                                <h3 class="capitalize text-2xl font-semibold mb-2">
+                                    search
+                                </h3>
+                                <button type="button" data-drawer-hide="search-drawer" aria-controls="search-drawer"
+                                    class="text-sidebar-foreground bg-transparent hover:text-primary-foreground w-9 h-9 flex items-center justify-center">
+                                    <svg class="w-6.5 h-6.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                    </svg>
+                                    <span class="sr-only">Close menu</span>
+                                </button>
+                            </div>
+
+                            <!--Search Body-->
+                            <div class="overflow-y-auto p-4">
+
+                                <!--Search bar-->
+                                <form>
+                                    <label for="search" class="text-base font-normal text-muted-foreground sr-only">
+                                        Search
+                                    </label>
+                                    <div class="relative">
+                                        <input type="search" id="search" class="block w-full py-2.5 px-4.5 bg-input-bg rounded-[3px] border-none
+                                    text-muted-foreground placeholder:text-muted-foreground focus:ring-1 ring-0
+                                    focus:ring-primary-foreground" placeholder="Search our site..." required />
+
+                                        <button type="button" class="absolute top-0 right-1 border-none 
+                                     focus:outline-none p-2 h-full flex items-center bg-input-bg">
+                                            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!--Popular Searches-->
+                                <div class="flex flex-col gap-5 mt-7.5">
+                                    <h4 class="text-primary-foreground font-semibold text-[18px] capitalize
+                                pb-2 border-b border-sidebar-line">
+                                        Popular searches
+                                    </h4>
+
+                                    <div class="row gap-4">
+                                        <a href="#"
+                                            class="capitalize text-[15px] font-medium text-muted-foreground
+                                    border-b border-sidebar-line hover:text-primary-foreground transition duration-200 ease-in-out">
+                                            Sheild
+                                        </a>
+
+                                        <a href="#"
+                                            class="capitalize text-[15px] font-medium text-muted-foreground
+                                    border-b border-sidebar-line hover:text-primary-foreground transition duration-200 ease-in-out">
+                                            shampoo
+                                        </a>
+
+                                        <a href="#"
+                                            class="capitalize text-[15px] font-medium text-muted-foreground
+                                    border-b border-sidebar-line hover:text-primary-foreground transition duration-200 ease-in-out">
+                                            Accessories
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--most searched products-->
+                                <div class="mt-8.75 flex flex-col gap-5">
+                                    <h4 class="text-primary-foreground font-semibold text-[18px] capitalize
+                                pb-2 border-b border-sidebar-line">
+                                        most searched products
+                                    </h4>
+
+                                    <!--products-->
+                                    <div class="products flex flex-col gap-5">
+                                        <div class="product row gap-4">
+                                            <a href="./product.html">
+                                                <div class="product-img w-20 h-20 overflow-hidden">
+                                                    <img src="./assets/images/Global/cococut-cleansing-oil.webp"
+                                                        alt="Nantural Coconut Cleansing Oil"
+                                                        class="h-full w-full object-cover object-center" />
+                                                </div>
+                                            </a>
+
+                                            <div class="info flex flex-col gap-1.25 font-semibold">
+                                                <span class="text-base">
+                                                    $21,00
+                                                </span>
+                                                <h5 class="text-[15px] capitalize">
+                                                    <a href="./product.html">
+                                                        Natural Coconut Cleansing Oil
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="product row gap-4">
+                                            <a href="./product.html">
+                                                <div class="product-img w-20 h-20 overflow-hidden">
+                                                    <img src="./assets/images/Global/eye-cream.webp" alt="Nourishing Eye Cream"
+                                                        class="h-full w-full object-cover object-center" />
+                                                </div>
+                                            </a>
+
+                                            <div class="info flex flex-col gap-1.25 font-semibold">
+                                                <span class="text-base">
+                                                    $19,00
+                                                </span>
+                                                <h5 class="text-[15px] capitalize">
+                                                    <a href="./product.html">
+                                                        Nourishing Eye Cream
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="product row gap-4">
+                                            <a href="./product.html">
+                                                <div class="product-img w-20 h-20 overflow-hidden">
+                                                    <img src="./assets/images/Global/sheild-shampoo.webp" alt="Shield Shampoo"
+                                                        class="h-full w-full object-cover object-center" />
+                                                </div>
+                                            </a>
+
+                                            <div class="info flex flex-col gap-1.25 font-semibold">
+                                                <div class="price flex gap-2 items-center">
+                                                    <span class="text-[14px] line-through text-muted-foreground">
+                                                        $60,00
+                                                    </span>
+                                                    <span class="text-base">
+                                                        $39,00
+                                                    </span>
+                                                </div>
+
+                                                <h5 class="text-[15px] capitalize">
+                                                    <a href="./product.html">
+                                                        Shield Shampoo
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="product row gap-4">
+                                            <a href="./product.html">
+                                                <div class="product-img w-20 h-20 overflow-hidden">
+                                                    <img src="./assets/images/Global/travel-case-set.webp"
+                                                        alt="Sideway Travel Case Set"
+                                                        class="h-full w-full object-cover object-center" />
+                                                </div>
+                                            </a>
+
+                                            <div class="info flex flex-col gap-1.25 font-semibold">
+                                                <span class="text-base">
+                                                    $19,00
+                                                </span>
+                                                <h5 class="text-[15px] capitalize">
+                                                    <a href="./product.html">
+                                                        Sideway Travel Case Set
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="product row gap-4">
+                                            <a href="./product.html">
+                                                <div class="product-img w-20 h-20 overflow-hidden">
+                                                    <img src="./assets/images/Global/polishing-treatment.webp"
+                                                        alt="Moisturizing Polishing Treatment"
+                                                        class="h-full w-full object-cover object-center" />
+                                                </div>
+                                            </a>
+
+                                            <div class="info flex flex-col gap-1.25 font-semibold">
+                                                <div class="price flex gap-2 items-center">
+                                                    <span class="text-[14px] line-through text-muted-foreground">
+                                                        $75,00
+                                                    </span>
+                                                    <span class="text-base">
+                                                        $45,00
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-[15px] capitalize">
+                                                    <a href="./product.html">
+                                                        Moisturizing Polishing Treatment
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--User-->
+                    <div class="hidden xlarge:block">
+                        <a href="./sign-in.html" class="h-full flex items-center w-6">
+                            <img src="./assets/images/Global/user.png" alt="login Icon" class="w-full">
+                        </a>
+                    </div>
+
+                    <!--Star-->
+                    <div class="hidden xlarge:block relative">
+                        <a href="./wishlist.html" class="h-full flex items-center w-6.5 ">
+                            <img src="./assets/images/Global/star.png" alt="whishlist Icon" class="w-full">
+                        </a>
+                        <div class="absolute flex items-center justify-center w-4.5 h-4.5 circle
+                        text-[10.5px] font-bold text-secondary-foreground bg-dark-bg 
+                        -top-1 -right-3">
+                            5
+                        </div>
+                    </div>
+
+                    <!--Shopping bag-->
+                    <div class="relative">
+                        <div>
+                            <div>
+                                <button class="h-fyll flex items-center w-5.75" type="button"
+                                    data-drawer-target="shopping-bag-drawer" data-drawer-show="shopping-bag-drawer"
+                                    data-drawer-placement="right" aria-controls="shopping-bag-drawer">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="Shopping cart Icon" class="w-full">
+                                </button>
+                                <div class="absolute flex items-center justify-center w-4.5 h-4.5 circle
+                                text-[10.5px] font-bold text-secondary-foreground bg-dark-bg 
+                                -top-2 -right-3">
+                                    1
+                                </div>
+                            </div>
+
+                            <!-- shopping drawer component -->
+                            <div id="shopping-bag-drawer"
+                                class="fixed top-0 right-0 z-40 h-screen transition-transform
+                                translate-x-full bg-primary-bg w-full xs:w-102.5 border-s border-default grid grid-rows-[68px_1fr_300px]" tabindex="-1"
+                                aria-labelledby="drawer-right-label">
+
+                                <!--shopping cart + exit button inside sidebar-->
+                                <div class="z-30 px-4 py-7.5 bg-primary-bg flex items-center justify-between">
+                                    <h3 class="capitalize text-2xl font-semibold">
+                                        shopping cart
+                                    </h3>
+                                    <button type="button" data-drawer-hide="shopping-bag-drawer"
+                                        aria-controls="shopping-bag-drawer"
+                                        class="text-sidebar-foreground bg-transparent hover:text-primary-foreground w-9 h-9 center">
+                                        <svg class="w-6.5 h-6.5 max-xs:mr-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                        </svg>
+                                        <span class="sr-only">Close menu</span>
+                                    </button>
+                                </div>
+
+                                <!--shopping Body-->
+                                <div class="overflow-y-auto p-4 stack items-start gap-7.5">
+                                    <!--Free shipping-->
+                                    <div class="stack items-start gap-3 w-full">
+                                        <span class="text-[15px] font-medium">
+                                            Spend 
+                                            <span class="font-bold">
+                                                $77.00
+                                            </span>
+                                            more to reach free shipping!
+                                        </span>
+
+                                        <div class="w-full bg-free-shipping-line-bg rounded-[3px] h-2">
+                                            <div class="bg-free-shipping-goal-bg h-2 rounded-[3px] relative" style="width: 23%">
+                                                <div class="absolute -top-3 inset-e-0 w-7.5 h-7.5 p-1.5 circle border border-free-shipping-goal-bg bg-primary-bg
+                                                center ">
+                                                    <img src="./assets/images/Global/shopping-truck.png" alt="w-full">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--products-->
+                                    <div class="stack gap-4">
+                                        <!--product-->
+                                        <div class="row gap-4 justify-between">
+                                            <!--product delete-->
+                                            <button class="bg-transparent border-none w-4">
+                                                <i class="fa-solid fa-xmark text-sm"></i>
+                                            </button>
+
+                                            <!--product image-->
+                                            <div class="flex-[0_0_60px] h-full flex items-center">
+                                                <a href="./product.html" class="h-full overflow-hidden">
+                                                    <img src="./assets/images/Global/enriched-hand-body-wash.webp" 
+                                                    alt="enriched hand & body wash" class="w-full h-full object-cover object-center"/>
+                                                </a>
+                                            </div>
+
+                                            <!--product info-->
+                                            <div class="stack items-start gap-0 font-semibold">
+                                                <!--product price-->
+                                                <div>
+                                                    <span class="text-[14px]">
+                                                        $23.00
+                                                    </span>
+                                                </div>
+
+                                                <!--product name-->
+                                                <a href="./product.html" class="text-[15px]">
+                                                    Enriched Hand & Body Wash
+                                                </a>
+
+                                                <!--product selected data-->
+                                                <p class="mt-1 text-[13px] font-medium text-muted-foreground">
+                                                    Size : Md - Color : Magenta
+                                                </p>
+                                            </div>
+
+                                            <div class="relative flex-[0_0_90px] flex items-center w-22.5">
+                                                <button type="button" id="decrement-button" data-input-counter-decrement="quantity-input" 
+                                                class="text-primary-foreground bg-offcanvas-background-color ring-none
+                                                 text-base leading-5 pl-2 focus:outline-none h-11.5">
+                                                    <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" 
+                                                    width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" 
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                                </button>
+                                                
+                                                <input type="text" id="quantity-input" data-input-counter aria-describedby="helper-text-explanation" 
+                                                class="border-none h-11.5 placeholder:text-primary-foreground text-center w-full bg-offcanvas-background-color
+                                                border-default-medium py-2.5 px-1" placeholder="1" required />
+
+                                                <button type="button" id="increment-button" data-input-counter-increment="quantity-input" 
+                                                class="text-primary-foreground bg-offcanvas-background-color ring-none
+                                                text-base leading-5 pl-2 focus:outline-none h-11.5">
+                                                    <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="h-full z-20 w-full shadow-[0_0_1rem_#0003] px-4 py-6 flex flex-col items-center
+                                    bg-offcanvas-background-color justify-between relative">
+                                    <!--Product wrap-->
+                                    <div class="w-full flex items-center gap-2 pb-4 border-b border-light-border-color">
+                                        <input id="wrap-checkbox" type="checkbox" value="" class="w-5 h-5 text-success  text-[19px] border 
+                                        border-primary-foreground rounded-[5px] bg-primary-bg focus:ring-2 focus:ring-success">
+                                        <label for="wrap-checkbox" class="select-none text-[15px] font-medium text-primary-foreground">
+                                            For $1.00, please wrap the products in this order.
+                                        </label>
+                                    </div>
+
+                                    <!--Cart Actions-->
+                                    <div class="w-full flex items-center px-2 justify-around mt-4">
+                                        <button class="stack gap-1"type="button" data-drawer-target="note-drawer" 
+                                        data-drawer-show="note-drawer" data-drawer-placement="bottom" aria-controls="note-drawer">
+                                            <img src="./assets/images/Global/note.png" alt="Note Action"
+                                            class="w-5"/>
+                                            <span class="text-base font-semibold">
+                                                Note
+                                            </span>
+                                        </button>
+
+                                        <button class="stack gap-1" data-drawer-target="discount-drawer" 
+                                        data-drawer-show="discount-drawer" data-drawer-placement="bottom" aria-controls="discount-drawer">
+                                            <img src="./assets/images/Global/discount.png" alt="Discount Action"
+                                            class="w-6.5"/>
+                                            <span class="text-base font-semibold">
+                                                Discount
+                                            </span>
+                                        </button>
+
+                                        <button class="stack gap-1.5" data-drawer-target="shipping-drawer" 
+                                        data-drawer-show="shipping-drawer" data-drawer-placement="bottom" aria-controls="shipping-drawer">
+                                            <i class="fa-regular fa-truck text-[20px]"></i>
+                                            <span class="text-base font-semibold">
+                                                Shipping
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <!-- note drawer component -->
+                                    <div id="note-drawer" class="absolute bottom-0 left-0 right-0 z-40 w-full px-4 py-8 
+                                    overflow-y-auto transition-transform bg-neutral-primary-soft border-t border-default 
+                                    translate-y-full shadow-[0_0_1rem_#0003]" tabindex="-1" aria-labelledby="drawer-bottom-label">
+
+                                        <div class="stack gap-4 items-start">
+                                            <!--Label-->
+                                            <div class="row gap-1">
+                                                <img src="./assets/images/Global/pen.png" alt="Pen Icon"
+                                                class="w-6"/>
+                                                <span class="text-xl font-semibold">Add note for seller.</span>
+                                            </div>
+
+                                            <!--Text Area-->
+                                            <div class="w-full">
+                                                <textarea id="message" rows="4" class="bg-input-bg border h-50
+                                                border-none text-muted-foreground text-base rounded-[3px] 
+                                                focus:ring-primary-foreground block w-full py-2.5 px-4.5 shadow-xs 
+                                                placeholder:text-muted-foreground" placeholder="Special instructions for seller."></textarea>
+                                            </div>
+
+                                            <!--Save/Cancel buttons-->
+                                            <div class="w-full row py-2 gap-4">
+                                                <button class="btn-dark">
+                                                    save
+                                                </button>
+                                                <button class="text-base font-semibold rounded-[3px] text-primary-foreground
+                                                bg-transparent capitalize w-fit border-b-2" type="button" data-drawer-hide="note-drawer" 
+                                                aria-controls="note-drawer">
+                                                    cancel
+                                                    <span class="sr-only">Close menu</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <!-- discunt drawer component -->
+                                    <div id="discount-drawer" class="absolute bottom-0 left-0 right-0 z-40 w-full px-4 py-8 
+                                    overflow-y-auto transition-transform bg-neutral-primary-soft border-t border-default 
+                                    translate-y-full shadow-[0_0_1rem_#0003]" tabindex="-1" aria-labelledby="drawer-bottom-label">
+
+                                        <div class="stack gap-4 items-start">
+                                            <!--Label-->
+                                            <div class="row gap-1">
+                                                <img src="./assets/images/Global/discount.png" alt="Pen Icon"
+                                                class="w-6"/>
+                                                <span class="text-xl font-semibold">Add a discount code</span>
+                                            </div>
+
+                                            <!--Text input-->
+                                            <div class="w-full">
+                                                <input id="discount" class="bg-input-bg border h-12
+                                                border-none text-muted-foreground text-base rounded-[3px] 
+                                                focus:ring-primary-foreground block w-full py-2.5 px-4.5 shadow-xs 
+                                                placeholder:text-muted-foreground" placeholder="Enter discount code here"></input>
+                                            </div>
+
+                                            <!--Save/Cancel buttons-->
+                                            <div class="w-full row py-2 gap-4">
+                                                <button class="btn-dark">
+                                                    save
+                                                </button>
+                                                <button class="text-base font-semibold rounded-[3px] text-primary-foreground
+                                                bg-transparent capitalize w-fit border-b-2" type="button" data-drawer-hide="discount-drawer" 
+                                                aria-controls="discount-drawer">
+                                                    cancel
+                                                    <span class="sr-only">Close menu</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- shipping drawer component -->
+                                    <div id="shipping-drawer" class="absolute bottom-0 left-0 right-0 z-40 w-full px-4 py-8 
+                                    overflow-y-auto transition-transform bg-neutral-primary-soft border-t border-default 
+                                    translate-y-full shadow-[0_0_1rem_#0003]" tabindex="-1" aria-labelledby="drawer-bottom-label">
+
+                                        <div class="stack gap-4 items-start">
+                                            <!--Label-->
+                                            <div class="row gap-1">
+                                                <img src="./assets/images/Global/discount.png" alt="Pen Icon"
+                                                class="w-6"/>
+                                                <span class="text-xl font-semibold">Estimate shipping rates</span>
+                                            </div>
+
+                                            <!--Text input-->
+                                            <div class="w-full stack gap-4 items-start">
+                                                <div class="stack items-start w-full">
+                                                    <label for="countries" class="text-[15px] text-primary-foreground font-semibold capitalize">
+                                                        country
+                                                    </label>
+                                                    <select id="countries" class="bg-input-bg border h-12
+                                                    border-none text-muted-foreground text-base rounded-[3px] 
+                                                    focus:ring-primary-foreground block w-full py-2.5 px-4.5 shadow-xs 
+                                                    placeholder:text-muted-foreground capitalize">
+                                                        <option selected>United States</option>
+                                                        <option>Afghanistan</option>
+                                                        <option>Albania</option>
+                                                        <option>Algeria</option>
+                                                        <option>Argentina</option>
+                                                        <option>Australia</option>
+                                                        <option>Austria</option>
+                                                        <option>Belgium</option>
+                                                        <option>Brazil</option>
+                                                        <option>Canada</option>
+                                                        <option>China</option>
+                                                        <option>Denmark</option>
+                                                        <option>Egypt</option>
+                                                        <option>Finland</option>
+                                                        <option>France</option>
+                                                        <option>Germany</option>
+                                                        <option>India</option>
+                                                        <option>Italy</option>
+                                                        <option>Japan</option>
+                                                        <option>Netherlands</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="stack items-start w-full">
+                                                    <label for="provinces" class="text-[15px] text-primary-foreground font-semibold capitalize">
+                                                        province
+                                                    </label>
+                                                    <select id="provinces" class="bg-input-bg border h-12
+                                                    border-none text-muted-foreground text-base rounded-[3px] 
+                                                    focus:ring-primary-foreground block w-full py-2.5 px-4.5 shadow-xs 
+                                                    placeholder:text-muted-foreground capitalize">
+                                                        <option selected>Alabama</option>
+                                                        <option>Alaska</option>
+                                                        <option>Arizona</option>
+                                                        <option>California</option>
+                                                        <option>Colorado</option>
+                                                        <option>Florida</option>
+                                                        <option>Georgia</option>
+                                                        <option>Hawaii</option>
+                                                        <option>Illinois</option>
+                                                        <option>Indiana</option>
+                                                        <option>Massachusetts</option>
+                                                        <option>Michigan</option>
+                                                        <option>New Jersey</option>
+                                                        <option>New York</option>
+                                                        <option>North Carolina</option>
+                                                        <option>Ohio</option>
+                                                        <option>Pennsylvania</option>
+                                                        <option>Texas</option>
+                                                        <option>Virginia</option>
+                                                        <option>Washington</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="stack items-start w-full">
+                                                    <label for="zip-code" class="text-[15px] text-primary-foreground font-semibold capitalize">
+                                                        Zip Code
+                                                    </label>
+                                                    <input id="zip-code" class="bg-input-bg border h-12
+                                                    border-none text-muted-foreground text-base rounded-[3px] 
+                                                    focus:ring-primary-foreground block w-full py-2.5 px-4.5 shadow-xs 
+                                                    placeholder:text-muted-foreground"></input>
+                                                </div>
+                                            </div>
+
+                                            <!--Save/Cancel buttons-->
+                                            <div class="w-full row py-2 gap-4">
+                                                <button class="btn-dark">
+                                                    Calculate shipping rates
+                                                </button>
+                                                <button class="text-base font-semibold rounded-[3px] text-primary-foreground
+                                                bg-transparent capitalize w-fit border-b-2" type="button" data-drawer-hide="shipping-drawer" 
+                                                aria-controls="shipping-drawer">
+                                                    cancel
+                                                    <span class="sr-only">Close menu</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--price subtotal-->
+                                    <div class="w-full flex items-center justify-between text-primary-foreground py-1">
+                                        <span class="capitalize text-[15px] font-medium">
+                                            subtotal
+                                        </span>
+                                        <span class="py-2 text-2xl font-semibold">
+                                            $23.00
+                                        </span>
+                                    </div>
+
+                                    <!--buttons-->
+                                    <div class="w-full stack mb-2.5">
+                                        <a href="#" class="btn-dark w-full">
+                                            Check out
+                                        </a>
+                                        <a href="./cart.html" class="btn-light w-full hover:bg-dark-bg border border-light-border-color">
+                                            View shopping cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Navbar links DROPDOWN MENUS!! -------------------------------->
+                <!--Home navbar link dropdown menu-->
+                <div id="homeDropdownHover"
+                    class="hidden mt-1 bg-primary-bg border-none border-y min-w-screen pb-4 pt-5 shadow-lg">
+                    <div
+                        class="grid px-4 py-5 text-sm text-dropdown-menu-foreground xlarge:grid-cols-5 xlarge:px-6 mx-15.5">
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Group 01
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 01
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 02
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 03
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 04
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 05
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Group 02
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 06
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 07
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 08
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 09
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 05
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Group 03
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 06
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 07
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 08
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 09
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 05
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Group 04
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 16
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 17
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Home 18
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Group 05
+                            </h3>
+
+                            <ul class="space-y-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        Demo 01
+                                        <span class="danger-badge">
+                                            Hot
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        Demo 02
+                                        <span class="danger-badge">
+                                            Hot
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        Demo 03
+                                        <span class="light-success-badge">
+                                            new
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        Demo 04
+                                        <span class="light-success-badge">
+                                            new
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Shop navbar link dropdown menu-->
+                <div id="shopDropdownHover"
+                    class="hidden mt-1 bg-primary-bg border-none border-y min-w-screen pb-4 pt-5 shadow-lg">
+                    <div
+                        class="grid px-4 py-5  text-sm text-dropdown-menu-foreground xlarge:grid-cols-5 xlarge:px-6 mx-15.5">
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Shop layout
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        left sidebar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        right sidebar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        Canvas filter
+                                        <span class="danger-badge">
+                                            Hot
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        hidden filter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Grid 3 column
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Grid 4 column
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Grid 5 column
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Product skin
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product skin grid 01
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product skin grid 02
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product skin grid 03
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product skin grid 04
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product skin grid 05
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product skin grid 06
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Product list skin
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                shop features
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        pagination classic
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        pagination ajax
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        pagination infinite
+                                        <span class="success-badge">
+                                            featured
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        pagination loadmore
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        pagination next previous
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Collections
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Collections list style 01
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Collections list style 02
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Collections list style 03
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Collections list style 04
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Collections list masonry
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Collections list with sidebar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="specialOffer bg-dropdown-offer bg-cover bg-center transition-all p-5
+                                duration-1000 ease-in-out hover:bg-size-[120%] text-primary-foreground flex flex-col justify-between">
+                            <div class="offer-info">
+                                <p class="uppercase text-[15px] font-semibold tracking-[1.5px]">
+                                    new collection
+                                </p>
+
+                                <h3 class="capitalize text-[34px] mt-1.75 font-semibold">
+                                    special <br>
+                                    offer
+                                </h3>
+                            </div>
+
+                            <a href="./products.html" class="btn-light">
+                                shop now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Product navbar link dropdown menu-->
+                <div id="productDropdownHover"
+                    class="hidden mt-1 bg-primary-bg border-none border-y min-w-screen pb-4 pt-5 shadow-lg">
+                    <div
+                        class="grid px-4 py-5 text-sm text-dropdown-menu-foreground xlarge:grid-cols-4 xlarge:px-6 mx-15.5">
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                Product layout
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        single product layout 01
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        single product layout 02
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        single product layout 03
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        single product layout 04
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        single product layout 05
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        single product layout 06
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                product features
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product color swatch
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product button swatch
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product dropdown swatch
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product image swatch
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product video
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        product 3D. AR models
+                                        <span class="success-badge">
+                                            featured
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                product features
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        Dynamic checkout button
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        sticky add to cart
+                                        <span class="danger-badge">
+                                            Hot
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        trust budget
+                                        <span class="success-badge">
+                                            featured
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        lightbox image
+                                        <span class="success-badge">
+                                            featured
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link flex items-center gap-1.5">
+                                        zoom image
+                                        <span class="danger-badge">
+                                            Hot
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="stack items-start">
+                            <h3 class="navbar-dropdown-menu-header">
+                                product featues
+                            </h3>
+
+                            <ul class="space-y-3 mt-1" aria-labelledby="mega-menu-full-cta-button">
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        collapsible tabs information
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product tabs information
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product reccomentdations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product recently viewed
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-dropdown-link">
+                                        product options & customizer
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Pages navbar link dropdown menu-->
+                <div id="pagesDropdownHover" class="hidden mt-1 bg-primary-bg border-none border-y pt-5 shadow-lg">
+                    <div class="grid px-4 py-5 text-sm text-dropdown-menu-foreground xlarge:px-4 min-w-62.5">
+                        <ul class="text-sm text-body font-medium" aria-labelledby="multiLevelDropdownButton">
+                            <li>
+                                <button id="aboutDoubleDropdownButton" data-dropdown-toggle="aboutDoubleDropdown"
+                                    data-dropdown-trigger="hover" data-dropdown-placement="right-start" type="button"
+                                    class="nav-dropdown-link-small-menu">
+                                    about us
+                                    <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m9 5 7 7-7 7" />
+                                    </svg>
+                                </button>
+                                <div id="aboutDoubleDropdown"
+                                    class="z-10 hidden bg-primary-bg py-2 px-4 w-62.5 shadow-md">
+                                    <ul class="p-2 text-sm text-body font-medium"
+                                        aria-labelledby="dropdownMultiLevelButton">
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                about us 01
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                about us 02
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button id="contactDoubleDropdownButton" data-dropdown-toggle="contactDoubleDropdown"
+                                    data-dropdown-trigger="hover" data-dropdown-placement="right-start" type="button"
+                                    class="nav-dropdown-link-small-menu">
+                                    contact us
+                                    <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m9 5 7 7-7 7" />
+                                    </svg>
+                                </button>
+                                <div id="contactDoubleDropdown"
+                                    class="z-10 hidden bg-primary-bg py-2 px-4 w-62.5 shadow-md">
+                                    <ul class="p-2 text-sm text-body font-medium"
+                                        aria-labelledby="dropdownMultiLevelButton">
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                full width
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                left sidebar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                right sidebar
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="nav-dropdown-link-small-menu gap-1.5">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="nav-dropdown-link-small-menu gap-1.5">
+                                    fin a store
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="nav-dropdown-link-small-menu gap-1.5">
+                                    page 404
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Blog navbar link dropdown menu-->
+                <div id="blogDropdownHover" class="hidden mt-1 bg-primary-bg border-none border-y pt-5 shadow-lg">
+                    <div class="grid px-4 py-5  text-sm text-dropdown-menu-foreground xlarge:px-4 min-w-62.5">
+                        <ul class="text-sm text-body font-medium" aria-labelledby="multiLevelDropdownButton">
+                            <li>
+                                <button id="standardDoubleDropdownButton" data-dropdown-toggle="standardDoubleDropdown"
+                                    data-dropdown-trigger="hover" data-dropdown-placement="right-start" type="button"
+                                    class="nav-dropdown-link-small-menu">
+                                    Blogs standard
+                                    <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m9 5 7 7-7 7" />
+                                    </svg>
+                                </button>
+                                <div id="standardDoubleDropdown"
+                                    class="z-10 hidden bg-primary-bg py-2 px-4 w-62.5 shadow-md">
+                                    <ul class="p-2 text-sm text-body font-medium"
+                                        aria-labelledby="dropdownMultiLevelButton">
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                full width
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                left sidebar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                right sidebar
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button id="gridDoubleDropdownButton" data-dropdown-toggle="gridDoubleDropdown"
+                                    data-dropdown-trigger="hover" data-dropdown-placement="right-start" type="button"
+                                    class="nav-dropdown-link-small-menu">
+                                    Blogs grid
+                                    <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m9 5 7 7-7 7" />
+                                    </svg>
+                                </button>
+                                <div id="gridDoubleDropdown"
+                                    class="z-10 hidden bg-primary-bg py-2 px-4 w-62.5 shadow-md">
+                                    <ul class="p-2 text-sm text-body font-medium"
+                                        aria-labelledby="dropdownMultiLevelButton">
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                full width
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                left sidebar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                right sidebar
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button id="grid2DoubleDropdownButton" data-dropdown-toggle="grid2DoubleDropdown"
+                                    data-dropdown-trigger="hover" data-dropdown-placement="right-start" type="button"
+                                    class="nav-dropdown-link-small-menu">
+                                    Blogs grid 02
+                                    <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m9 5 7 7-7 7" />
+                                    </svg>
+                                </button>
+                                <div id="grid2DoubleDropdown"
+                                    class="z-10 hidden bg-primary-bg py-2 px-4 w-62.5 shadow-md">
+                                    <ul class="p-2 text-sm text-body font-medium"
+                                        aria-labelledby="dropdownMultiLevelButton">
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                full width
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                left sidebar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                right sidebar
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="nav-dropdown-link-small-menu gap-1.5">
+                                    sticky add to cart
+                                    <span class="danger-badge">
+                                        Hot
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <button id="listDoubleDropdownButton" data-dropdown-toggle="listDoubleDropdown"
+                                    data-dropdown-trigger="hover" data-dropdown-placement="right-start" type="button"
+                                    class="nav-dropdown-link-small-menu">
+                                    Blogs list
+                                    <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m9 5 7 7-7 7" />
+                                    </svg>
+                                </button>
+                                <div id="listDoubleDropdown"
+                                    class="z-10 hidden bg-primary-bg py-2 px-4 w-62.5 shadow-md">
+                                    <ul class="p-2 text-sm text-body font-medium"
+                                        aria-labelledby="dropdownMultiLevelButton">
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                full width
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                left sidebar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                right sidebar
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button id="postDoubleDropdownButton" data-dropdown-toggle="postDoubleDropdown"
+                                    data-dropdown-trigger="hover" data-dropdown-placement="right-start" type="button"
+                                    class="nav-dropdown-link-small-menu">
+                                    Blogs post
+                                    <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m9 5 7 7-7 7" />
+                                    </svg>
+                                </button>
+                                <div id="postDoubleDropdown"
+                                    class="z-10 hidden bg-primary-bg py-2 px-4 w-62.5 shadow-md">
+                                    <ul class="p-2 text-sm text-body font-medium"
+                                        aria-labelledby="dropdownMultiLevelButton">
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                layout 01
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                layout 02
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="nav-dropdown-link-small-menu">
+                                                with sidebar
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--Compare Fixed Icon-->
+    <div>
+        <div class="fixed -right-14 top-[calc(50%-20px)] z-40 rotate-270">
+            <button class="rounded-t-[8px] bg-primary text-secondary-foreground hover:bg-dark-bg text-[14px] font-semibold
+            tracking-[4.2px] uppercase px-3.75 py-1.25 row gap-2 h-10" type="button" 
+            data-drawer-target="compare-drawer" data-drawer-show="compare-drawer" 
+            data-drawer-placement="bottom" aria-controls="compare-drawer">
+                <img src="./assets/images/Global/arrows.png" alt="arrows" class="w-4 h-4.5"/>
+                compare
+            </button>
+        </div>
+
+        <!-- compare drawer component -->
+        <div id="compare-drawer" class="fixed bottom-0 md:bottom-0 left-0 right-0 z-50 w-full p-4 overflow-y-auto transition-transform 
+        bg-primary-bg border-t border-[#0000002D] translate-y-full shadow-[0_0_10px_#0000002D] h-95 sm:h-62.5" 
+        tabindex="-1" aria-labelledby="drawer-bottom-label">
+
+            <div class="container stack items-start gap-6">
+                <div class="mt-3.75">
+                    <h5 class="capitalize text-2xl font-semibold text-primary-foreground">
+                        compare product
+                    </h5>
+                    <button type="button" data-drawer-hide="compare-drawer" aria-controls="compare-drawer" class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center">
+                        <svg class="w-6.5 h-6.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+                        <span class="sr-only">Close menu</span>
+                    </button>
+                </div>
+
+                <div class="flex sm:flex-row sm:items-center sm:justify-between sm:gap-0 w-full h-full
+                flex-col gap-7.5 ">
+                    <div class="row gap-4">
+                        <!--Product-->
+                        <div class="product relative overflow-hidden group">
+                            <a href="./product.html"  class="center">
+                                <img src="./assets/images/Global/ScalpMoisturizingCream.webp" alt="Scalp Moisturizing Cream"
+                                class="w-full max-w-32.5 sm:max-w-27.5 aspect-square object-cover transition-transform duration-500 
+                                ease-out group-hover:scale-110"/>
+                            </a>
+                            <button class="absolute top-2.5 right-2.5 w-7.5 h-7.5 circle bg-primary-bg center">
+                                <i class="fa-solid fa-xmark text-[12px]"></i>
+                            </button>
+                        </div>
+
+                        <!--Product-->
+                        <div class="product relative overflow-hidden group">
+                            <a href="./product.html"  class="center">
+                                <img src="./assets/images/Global/EnrichedDuo.webp" alt="Enriched Duo"
+                                class="w-full max-w-32.5 sm:max-w-27.5 aspect-square object-cover transition-transform duration-500 
+                                ease-out group-hover:scale-110"/>
+                            </a>
+                            <button class="absolute top-2.5 right-2.5 w-7.5 h-7.5 circle bg-primary-bg center">
+                                <i class="fa-solid fa-xmark text-[12px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="stack gap-4 max-sm:w-full">
+                        <a href="./compare.html" class="btn-dark w-full sm:w-fit">
+                            Compare now
+                        </a>
+
+                        <button class="capitalize text-primary-foreground bg-transparent border-b
+                        text-base font-semibold hover:text-danger hover:border-danger transition-all duration-200
+                        ease-in-out">
+                            clear all
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--main section-->
+    <main>
+        <!--Breadcrumb nav section-->
+        <nav class="py-3 bg-breadcrumb-bg">
+            <div class="container flex justify-center">
+                <ol class="inline-flex items-center space-x-2">
+                    <li>
+                        <a href="./index.html" class="capitalize text-muted-foreground text-[15px] font-medium">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <div class="w-5 h-[0.75px] mt-1 bg-muted-foreground"></div>
+                        <a href="./products.html" class="capitalize text-primary-foreground text-[15px] font-medium">
+                            Products
+                        </a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <div class="w-5 h-[0.75px] mt-1 bg-muted-foreground"></div>
+                        <span class="capitalize text-primary-foreground text-[15px] font-medium">
+                            Enriched Duo
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <!--cart section-->
+        <section class="stack gap-0 pb-20 xlarge:pb-25">
+            
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="bg-section-bg-color pt-18.5 xl:pt-25.75 pb-19.25 mb-15 md:mb-0">
+        <div class="container-xl stack gap-14.5 xl:gap-28">
+            <!--Info and links section-->
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-[1fr_1fr_1fr_2fr] gap-4">
+                <!--Company-->
+                <div class="stack items-start gap-4 lg:col-span-2 xl:col-span-1">
+                    <h3 class="capitalize font-semibold text-[20px] text-primary-foreground">
+                        Company
+                    </h3>
+
+                    <!--Info-->
+                    <div class="stack items-start gap-4 text-muted-foreground text-[15px]/[27.75px] font-medium">
+                        <p class="max-w-40">
+                            Find a location nearest you. See 
+                            <a href="#" class="text-primary-foreground border-b border-light-border-color font-semibold capitalize">
+                                Our Stores
+                            </a>
+                        </p>
+
+                        <p class="max-w-40">
+                            <span class="font-bold text-primary-foreground">+391 (0)35 2568 4593</span>
+                            hello@domain.com
+                        </p>
+                    </div>
+                </div>
+
+                <div class="stack items-start gap-4 lg:col-span-2 xl:col-span-1">
+                    <h3 class="capitalize font-semibold text-[20px] text-primary-foreground">
+                        useful links
+                    </h3>
+
+                    <ul class="stack items-start gap-3.25 text-muted-foreground text-[15px]/[24px] font-medium">
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                New products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                Best sellers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                Bundle & save
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                online gift card
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="stack items-start gap-4 lg:col-span-2 xl:col-span-1">
+                    <h3 class="capitalize font-semibold text-[20px] text-primary-foreground">
+                        information
+                    </h3>
+
+                    <ul class="stack items-start gap-3.25 text-muted-foreground text-[15px]/[22.5px] font-medium">
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                start a return
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                contact us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                shipping FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                terms & conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="capitalize hover:text-primary-foreground transition duration-100 ease-in-out">
+                                privacy policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="stack items-start gap-10 lg:col-span-3 xl:col-span-1">
+                    <div class="stack items-start gap-6 max-w-115">
+                        <h3 class="text-primary-foreground text-[34px] font-semibold">
+                            Good emails.
+                        </h3>
+                        <p class="text-[15px] leading-6 font-medium text-muted-foreground">
+                            Enter your email below to be the first to know about new collections and product launches.
+                        </p>
+                    </div>
+
+                    <div class="row gap-0 w-full">
+                        <input type="text" id="first_name" class="bg-primary-bg
+                        border border-default-medium border-r-0 text-muted-foreground rounded-l-[3px] block w-full px-4.5 py-2.5
+                        placeholder:text-muted-foreground ring-0" placeholder="Enter you email address" />
+
+                        <button type="submit" class="btn-dark h-full rounded-l-0">
+                            subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--logo & about section-->
+            <div class="grid grid-cols-12 gap-4 items-center w-full">
+                <!-- Left content -->
+                <div class="col-span-12 md:col-span-6 xl:col-span-5 order-1 row items-start gap-4.25 flex-wrap">
+                    <p class="text-[15px] font-medium text-muted-foreground">
+                        © Glowing 2025 | 
+                        <span class="cursor-pointer hover:text-primary-foreground transition duration-100 ease-in-out">
+                            Powered by Ansam
+                        </span>
+                    </p>
+
+                    <!--Social Media-->
+                    <div class="flex items-center gap-4.5">
+                        <a href="#">
+                            <i class="fa-brands fa-instagram text-[18px]"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter text-[18px]"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook text-[16px]"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube text-[16px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Logo -->
+                <div class="col-span-12 max-h-dvh:col-span-12 xl:col-span-2 order-3 xl:order-2 flex justify-start md:justify-center
+                mt-3.75 md:mt-7.5 xl:mt-0">
+                    <a href="./index.html">
+                        <img src="./assets/images/Global/logo.png" alt="Glowing Logo"
+                        class="w-47.5"/>
+                    </a>
+                </div>
+
+                <!-- Right content -->
+                <div class="col-span-12 md:col-span-6 xl:col-span-5 order-2 xl:order-3 flex justify-start md:justify-end
+                gap-2.5 flex-wrap">
+                    <!--Visa-->
+                    <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg center">
+                        <img src="./assets/images/Global/visa.png" alt="Visa payment method" class="w-7.5"/>
+                    </div>
+                    <!--Mastercard-->
+                    <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg center">
+                        <img src="./assets/images/Global/mastercard.png" alt="Master Card payment method" class="w-6.5"/>
+                    </div>
+                    <!--Mastercard-->
+                    <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-[#006fcf] center justify-end">
+                        <img src="./assets/images/Global/americanExpress.png" alt="American Expresspayment method" class="w-5.5"/>
+                    </div>
+                    <!--Paypal-->
+                    <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg center">
+                        <img src="./assets/images/Global/paypal.png" alt="Paypal payment method" class="w-5"/>
+                    </div>
+                    <!--Diners Club-->
+                    <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg center">
+                        <img src="./assets/images/Global/dinersClub.png" alt="Diners Club payment method" class="w-5"/>
+                    </div>
+                    <!--Discover-->
+                    <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg flex items-end 
+                    justify-end overflow-hidden">
+                        <img src="./assets/images/Global/Dicsover.png" alt="Discover payment method" class="w-10"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!--Bottom Navigation-->
+    <div class="fixed bottom-0 left-0 z-49 w-full h-15 bg-primary-bg shadow-[-1px_-2px_10px_#00000014] md:hidden">
+        <div class="container"> 
+            <div class="w-full grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+                <!--Home bottom nav Icon-->
+                <a href="./index.html" class="w-full stack justify-center gap-1 px-1.25 py-2 border-light-border-color border-r">
+                    <img src="./assets/images/Global/home.png" alt="Home Icon bottom navigation"
+                    class="w-5"/>
+                    <span class="text-[13px] font-medium text-primary-foreground capitalize">Home</span>
+                </a>
+
+                <!--Cart bottom nav Icon-->
+                <button type="button" data-drawer-target="shopping-bag-drawer" data-drawer-show="shopping-bag-drawer"
+                data-drawer-placement="right" aria-controls="shopping-bag-drawer"
+                class="w-full stack justify-center gap-1 px-1.25 py-2 border-light-border-color border-r">
+                    <div class="center relative">
+                        <img src="./assets/images/Global/shopping-bag.png" alt="Cart Icon bottom navigation"
+                        class="w-5"/>
+                        <div class="absolute flex items-center justify-center w-4.5 h-4.5 circle
+                        text-[10.5px] font-bold text-secondary-foreground bg-dark-bg 
+                        -top-2 -right-2.5">
+                            1
+                        </div>
+                    </div>
+                    <span class="text-[13px] font-medium text-primary-foreground capitalize">Cart</span>
+                </button>
+                
+                <!--Shop bottom nav Icon-->
+                <a href="./products.html" class="w-full stack justify-center gap-1 px-1.25 py-2 border-light-border-color border-r">
+                    <img src="./assets/images/Global/shop.png" alt="Home Icon bottom navigation"
+                    class="w-4.75"/>
+                    <span class="text-[13px] font-medium text-primary-foreground capitalize">shop</span>
+                </a>
+
+                <!--search bottom nav Icon-->
+                <button type="button" data-drawer-target="search-drawer" data-drawer-show="search-drawer" 
+                data-drawer-placement="right" aria-controls="search-drawer"
+                class="w-full stack justify-center gap-1 px-1.25 py-2">
+                    <img src="./assets/images/Global/search.png" alt="search Icon bottom navigation"
+                    class="w-5"/>
+                    <span class="text-[13px] font-medium text-primary-foreground capitalize">Search</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
+    <script src="./assets/JavaScript/main.js"></script>
+</body>
+
+</html>
