@@ -2704,7 +2704,7 @@
                     <li class="flex items-center gap-2">
                         <div class="w-5 h-[0.75px] mt-1 bg-muted-foreground"></div>
                         <a href="./products.html" class="capitalize text-primary-foreground text-[15px] font-medium">
-                            Products
+                            Beauty & Cosmetics
                         </a>
                     </li>
 
@@ -2718,9 +2718,220 @@
             </div>
         </nav>
 
-        <!--cart section-->
-        <section class="stack gap-0 pb-20 xlarge:pb-25">
-            
+        <!--product section-->
+        <section class="pt-15 xlarge:pt-20 pb-10 xlarge:pb-17">
+            <div class="container grid grid-cols-1 lg:grid-cols-2 gap-x-15.75 gap-y-12">
+                <!--images-->
+                <div class="w-full">
+                    <!--big image-->
+                    <div class="overflow-hidden w-full relative group">
+                        <img src="./assets/images/product/EnrichedDuo.webp" alt="Enriched Duo"
+                        class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+
+                        <div class="absolute w-10 h-10 circle center top-2.5 right-2.5 bg-primary-bg
+                        shadow-xs">
+                            <img src="./assets/images/Global/search.png" alt="zoom icon"
+                            class="w-4.5 h-4.5"/>
+                        </div>
+                    </div>
+
+                    <!--other images-->
+                    <div class="grid grid-cols-5 gap-2 mt-4">
+                        <img src="./assets/images/product/EnrichedDuo.webp" alt="main image"
+                        class="cursor-pointer border"/>
+
+                        <img src="./assets/images/product/EnrichedDuo2.webp" alt="main image 2"
+                        class="cursor-pointer hover:border"/>
+
+                        <img src="./assets/images/product/EnrichedDuo3.webp" alt="main image 2"
+                        class="cursor-pointer hover:border"/>
+
+                        <img src="./assets/images/product/EnrichedDuo4.webp" alt="main image 2"
+                        class="cursor-pointer hover:border"/>
+                    </div>
+                </div>
+
+                <!--info-->
+                <div class="w-full stack items-start gap-5 text-primary-foreground">
+                    <!--name & price-->
+                    <div class="stack items-start gap-2.5">
+                        <span class="text-[18px] font-semibold">
+                            $31.00
+                        </span>
+
+                        <h1 class="text-[34px] font-semibold">
+                            Enriched Duo
+                        </h1>
+                    </div>
+
+                    <!--color-->
+                    <div class="stack items-start gap-4">
+                        <span class="text-[15px] font-semibold capitalize">
+                            color: black
+                        </span>
+
+                        <div class="gap-2.5 flex">
+                            <div class="w-7.5 h-7.5 circle border-[1.5px]">
+                                <div class="w-full h-full circle border-[3.5px] border-primary-bg bg-black">
+                                </div>
+                            </div>
+
+                            <div class="w-7.5 h-7.5 circle border border-[#cccccc] bg-[#0000ff] hover:border-2 hover:border-black"></div>
+                            <div class="w-7.5 h-7.5 circle border border-[#cccccc] bg-[#ee0000] hover:border-2 hover:border-black"></div>
+                        </div>
+                    </div>
+
+                     <!--quantity-->
+                    <div class="stack items-start gap-4 w-full">
+                        <span class="text-[15px] font-semibold capitalize">
+                            quantity
+                        </span>
+
+                        <div class="gap-4 flex w-full">
+                            <div class="relative flex items-center w-35 xlarge:w-42.5">
+                                <button type="button" id="decrement-button" data-input-counter-decrement="quantity-input" 
+                                class="text-primary-foreground bg-offcanvas-background-color ring-none
+                                    text-base leading-5 pl-2 focus:outline-none h-15">
+                                    <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" 
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" 
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                </button>
+                                
+                                <input type="text" id="quantity-input" data-input-counter aria-describedby="helper-text-explanation" 
+                                class="border-none h-15 placeholder:text-primary-foreground text-center w-full bg-offcanvas-background-color
+                                border-default-medium py-2.5 px-1" placeholder="1" required />
+
+                                <button type="button" id="increment-button" data-input-counter-increment="quantity-input" 
+                                class="text-primary-foreground bg-offcanvas-background-color ring-none
+                                text-base leading-5 pr-2 focus:outline-none h-15">
+                                    <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
+                                </button>
+                            </div>
+
+                            <button class="btn-light-to-dark w-full">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="btn-dark h-15 w-full">
+                        but it now
+                    </button>
+
+                    <div class="flex flex-col gap-2 md:flex-row md:gap-6 text-[15px] font-semibold">
+                        <a href="#" class="group flex gap-1.75 items-center">
+                            <i class="fa-solid fa-arrow-right-arrow-left group-hover:text-primary
+                            transition-all duration-200 ease-in-out"></i>
+                            <span class="capitalize group-hover:text-primary transition-all duration-200 ease-in-out">
+                                remove from compare
+                            </span>
+                        </a>
+
+                        <a href="#" class="group flex gap-1.75 items-center">
+                            <i class="fa-regular fa-star group-hover:text-primary
+                            transition-all duration-200 ease-in-out"></i>
+                            <span class="capitalize group-hover:text-primary transition-all duration-200 ease-in-out">
+                                remove from wishlist
+                            </span>
+                        </a>
+
+                        <a href="#" class="group flex gap-1.75 items-center">
+                            <i class="fa-solid fa-share-nodes group-hover:text-primary
+                            transition-all duration-200 ease-in-out"></i>
+                            <span class="capitalize group-hover:text-primary transition-all duration-200 ease-in-out">
+                                share
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="stack items-start gap-2">
+                        <div class="flex gap-2 items-center">
+                            <img src="./assets/images/product/fast-shipping.png" alt="fast shipping icon"
+                            class="h-4.5 w-5"/>
+                            <span class="capitalize">
+                                Estimated Delivery:
+                                <span class="text-muted-foreground">
+                                    april 01 - april 05
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="flex gap-2 items-center">
+                            <img src="./assets/images/product/package.png" alt="fast shipping icon"
+                            class="h-4.5 w-4.5 pl-0.5"/>
+                            <span class="capitalize">
+                                Free Shipping & Returns:
+                                <span class="text-muted-foreground">
+                                    On all orders over $75
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="my-1.5 py-6 px-2 bg-shipping-gray-bg center w-full flex-col gap-2">
+                        <div class="flex justify-start md:justify-end gap-2.5 flex-wrap py-2">
+                            <!--Visa-->
+                            <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg center">
+                                <img src="./assets/images/Global/visa.png" alt="Visa payment method" class="w-7.5"/>
+                            </div>
+                            <!--Mastercard-->
+                            <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg center">
+                                <img src="./assets/images/Global/mastercard.png" alt="Master Card payment method" class="w-6.5"/>
+                            </div>
+                            <!--Mastercard-->
+                            <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-[#006fcf] center justify-end">
+                                <img src="./assets/images/Global/americanExpress.png" alt="American Expresspayment method" class="w-5.5"/>
+                            </div>
+                            <!--Paypal-->
+                            <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg center">
+                                <img src="./assets/images/Global/paypal.png" alt="Paypal payment method" class="w-5"/>
+                            </div>
+                            <!--Diners Club-->
+                            <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg center">
+                                <img src="./assets/images/Global/dinersClub.png" alt="Diners Club payment method" class="w-5"/>
+                            </div>
+                            <!--Discover-->
+                            <div class="h-[25.5px] w-11 border border-bank-cards-border-color rounded-[3px] bg-primary-bg flex items-end 
+                            justify-end overflow-hidden">
+                                <img src="./assets/images/Global/Dicsover.png" alt="Discover payment method" class="w-10"/>
+                            </div>
+                        </div>
+
+                        <p class="text-muted-foreground font-medium text-[14px]">
+                            Guarantee safe & secure checkout
+                        </p>
+                    </div>
+
+                    <div class="w-full border-t border-light-border-color"></div>
+                    
+                    <div class="stack items-start gap-1 text-[14px] font-medium text-primary-foreground">
+                        <div class="flex gap-1">
+                            <span class="w-25 capitalize font-semibold">
+                                vendor:
+                            </span>
+                            <span class="capitalize text-muted-foreground">
+                                vendor 5
+                            </span>
+                        </div>
+                        <div class="flex gap-1">
+                            <span class="w-25 capitalize font-semibold">
+                                collections:
+                            </span>
+                            <span class="capitalize text-muted-foreground w-[calc(100%-100px)]">
+                                Beauty & Cosmetics , Bestseller , Cleansers , Featured , New Arrival , Skincare , Skincare Set , under $40
+                            </span>
+                        </div>
+                        <div class="flex gap-1">
+                            <span class="w-25 capitalize font-semibold">
+                                sku:
+                            </span>
+                            <span class="capitalize text-muted-foreground">
+                                101
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
