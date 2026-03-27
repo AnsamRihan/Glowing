@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Shopping Cart</title>
+    <title>Products</title>
 
     <!--Page Icon-->
     <link rel="icon" href="./assets/images/Global/glowing.ico">
@@ -2712,13 +2712,778 @@
         </nav>
 
         <!--cart section-->
-        <section class="stack gap-14">
+        <section class="stack gap-0 pb-20 xlarge:pb-25">
             <!--wishlist title-->
             <div class="pt-10 pb-9.25">
                 <div class="container-xl">
                     <h1 class="capitalize text-[40px] text-primary-foreground font-semibold center">
                         Products
                     </h1>
+                </div>
+            </div>
+            
+            <div class="container-xl stack gap-12">
+                <!--Filters section-->
+                <div class="w-full flex justify-between items-center gap-2">
+
+                    <!--Filter icon & p-->
+                    <div class="flex gap-6 w-full">
+                        <!--filter icon-->
+                        <div>
+                            <button type="button" data-drawer-target="filter-drawer" data-drawer-show="filter-drawer"
+                                data-drawer-body-scrolling="false" aria-controls="filter-drawer"
+                                class="inline-flex items-center gap-2 justify-center text-base text-primary-foreground font-semibold
+                                 rounded-lg hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none">
+                                <img src="./assets/images/products/filter.png" alt="Open filter menu" class="w-4 h-4" />
+                                <span class="">Filter</span>
+                            </button>
+
+                            <div id="filter-drawer" class="fixed top-0 left-0 z-51 h-screen transition-transform 
+                                -translate-x-full bg-primary-bg w-87.5 max-xxs:w-full border-e border-border-color-translucent"
+                                tabindex="-1" aria-labelledby="filter-drawer-label">
+
+                                <!--LOGO + exit button inside sidebar-->
+                                <div class="w-full p-4 lg:pl-12 bg-primary-bg flex items-center justify-between">
+                                    <h4 class="capitalize font-semibold text-[34px] text-primary-foreground">
+                                        Filter
+                                    </h4>
+                                    
+                                    <button type="button" data-drawer-hide="filter-drawer" aria-controls="filter-drawer"
+                                        class="text-sidebar-foreground bg-transparent hover:text-primary-foreground w-9 h-9 flex items-center justify-center">
+                                        <svg class="w-6.25 h-6.25" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                        </svg>
+                                        <span class="sr-only">Close menu</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-[18px] text-muted-foreground font-medium hidden lg:block">
+                            We found 
+                            <span class="text-primary-foreground">
+                                16 
+                            </span>
+                            products available for you.
+                        </p>
+                    </div>
+
+                    <!--layout & arrangment-->
+                    <div class="flex gap-6 items-center w-fit">
+
+                        <!--layout icons-->
+                        <div class="hidden lg:block">
+                            <div class="flex gap-2 items-center">
+                                <img src="./assets/images/products/window.png" alt="grid layout"
+                                class="w-7.5 p-0.75"/>
+                                <i class="fa-solid fa-bars text-[26px] text-muted-foreground"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="w-40 xxs:w-51">
+                            <select id="countries" class="bg-input-bg border h-12
+                            border-none text-primary-foreground text-base rounded-[3px] 
+                            focus:ring-2 focus:ring-primary block w-full py-2.5 px-4.5 shadow-xs 
+                            placeholder:text-muted-foreground capitalize">
+                                <option>Featured</option>
+                                <option>Best selling</option>
+                                <option selected>Alphabetically, A-Z</option>
+                                <option>Alphabetically, Z-A</option>
+                                <option>Price, low to high</option>
+                                <option>Price, high to low</option>
+                                <option>Date, old to new</option>
+                                <option>Date, new to old</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!--products grid-->
+                <div class="mt-0.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-7.5 gap-y-12.5">
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/EnrichedDuo.webp" alt="Enriched Duo"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-dark-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/star.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-dark-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows-white.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-primary-foreground">
+                                    $27.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Enriched Duo
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/EnrichedHand&BodyWash.webp" alt="Enriched Hand & Body Wash"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--badge-->
+                            <span class="danger-badge bf-[#bc4f38] text-base font-bold px-3 py-0.5 absolute top-3.75 left-3.75">
+                                new
+                            </span>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-dark-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/star.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-primary-foreground">
+                                    $23.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Enriched Hand & Body Wash
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/EnrichedHandWash.webp" alt="Enriched Hand Wash"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--badge-->
+                            <span class="success-badge text-base font-bold px-3 py-0.5 absolute top-3.75 left-3.75">
+                                Sale
+                            </span>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-dark-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/star.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-muted-foreground line-through">
+                                    $85.00
+                                </span>
+                                <span class="text-primary-foreground">
+                                    $25.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Enriched Hand Wash
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/MoisturizingPolishingTreatment.webp" alt="Moisturizing Polishing Treatment"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--badge-->
+                            <span class="success-badge text-base font-bold px-3 py-0.5 absolute top-3.75 left-3.75">
+                                Sale
+                            </span>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/start-dark.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-muted-foreground line-through">
+                                    $75.00
+                                </span>
+                                <span class="text-primary-foreground">
+                                    $45.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Moisturizing Polishing Treatment
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/NaturalCoconutCleansingOil.webp" alt="Natural Coconut Cleansing Oil"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/start-dark.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-primary-foreground">
+                                    $21.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Natural Coconut Cleansing Oil
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/NourishingEyeCream.webp" alt="Nourishing Eye Cream"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-dark-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/star.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-primary-foreground">
+                                    $19.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Nourishing Eye Cream
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/NourishingMoistureMask.webp" alt="Nourishing Moisture Mask"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/start-dark.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-primary-foreground">
+                                    $35.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Nourishing Moisture Mask
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/PerfectingFacialOil.webp" alt="Perfecting Facial Oil"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--badge-->
+                            <span class="success-badge text-base font-bold px-3 py-0.5 absolute top-3.75 left-3.75">
+                                Sale
+                            </span>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/start-dark.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-muted-foreground line-through">
+                                    $21.00
+                                </span>
+                                <span class="text-primary-foreground">
+                                    $15.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Perfecting Facial Oil
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/ScalpMoisturizingCream.webp" alt="Scalp Moisturizing Cream"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/start-dark.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-dark-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows-white.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-primary-foreground">
+                                    $29.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Scalp Moisturizing Cream
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/ShieldConditioner.webp" alt="Shield Conditioner"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--badge-->
+                            <span class="danger-badge bf-[#bc4f38] text-base font-bold px-3 py-0.5 absolute top-3.75 left-3.75">
+                                new
+                            </span>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/start-dark.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-primary-foreground">
+                                    $27.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Shield Conditioner
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/ShieldShampoo.webp" alt="Shield Shampoo"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--badge-->
+                            <span class="success-badge text-base font-bold px-3 py-0.5 absolute top-3.75 left-3.75">
+                                Sale
+                            </span>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/start-dark.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-muted-foreground line-through">
+                                    $60.00
+                                </span>
+                                <span class="text-primary-foreground">
+                                    $39.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Shield Shampoo
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--Product-->
+                    <div class="stack gap-4">
+                        <!--image-->
+                        <div class="overflow-hidden relative group">
+                            <a href="./product.html">
+                                <img src="./assets/images/products/ShieldSpray.webp" alt="Shield Spray"
+                                class="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"/>
+                            </a>
+
+                            <!--Icons-->
+                            <div class="absolute bottom-5 -translate-x-1/2 left-1/2 center gap-2.5 lg:opacity-0 group-hover:opacity-100
+                            transition-all duration-150 ease-in-out">
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/Global/shopping-bag.png" alt="cart icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/eye.png" alt="eye icon"
+                                    class="w-5.5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-dark-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/star.png" alt="favorite icon"
+                                    class="w-5"/>
+                                </button>
+
+                                <button class="w-12 h-12 circle center bg-primary-bg border-none shadow-sm">
+                                    <img src="./assets/images/products/arrows.png" alt="compare icon"
+                                    class="w-5"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--Info-->
+                        <div class="stack justify-center gap-1.25">
+                            <!--prices-->
+                            <div class="flex gap-2 text-base font-semibold">
+                                <span class="text-primary-foreground">
+                                    $37.00
+                                </span>
+                            </div>
+
+                            <!--name-->
+                            <h2 class="text-[15px] font-semibold">
+                                <a href="./product.html">
+                                    Shield Spray
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!--pagination-->
+                <div class="w-full">
+                    <div class="text-base font-semibold center">
+                        <a href="#" class="w-10 h-10 circle bg-input-bg center">
+                            1
+                        </a>
+                        <a href="#">
+                            <span class="w-10 center">
+                                2
+                            </span>
+                        </a>
+                        <a href="#" class="w-10 center">
+                            <i class="fa-solid fa-angles-right text-[14px]"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

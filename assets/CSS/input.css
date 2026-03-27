@@ -26,6 +26,7 @@
     --color-table-odd-color: #f2f2f2;
     --color-table-even-color: #ffffff;
     --color-table-hover-color: #ececec;
+    --color-border-color-translucent: rgba(0, 0, 0, .175);
 
     /*Foregrounds colors*/
     --color-primary-foreground: #000000;
@@ -50,6 +51,7 @@
     --font-heading-font: "Urbanist", "Inter", sans-serif;
 
     /*Custom breakpoint*/
+    --breakpoint-xxs: 350px;
     --breakpoint-xs: 450px;
     --breakpoint-xlarge: 1200px;
     --breakpoint-2xlarge: 1400px;
